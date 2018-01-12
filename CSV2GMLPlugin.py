@@ -14,7 +14,6 @@ class CSV2GMLPlugin:
       self.bacteria.remove('\"\"')
       self.n = len(self.bacteria)
       self.ADJ = []
-      #self.ADJ = numpy.zeros([self.n, self.n])
       i = 0
       for line in filestuff:
          contents = line.split(',')
