@@ -2,6 +2,7 @@
 # Language: Python
 # Input: CSV (file to convert)
 # Output: GML (converted file)
+# Tested with: PluMA 1.0, Python 2.7
 
 PluMA plugin to convert a network represented in Comma-Separated Value (CSV) format
 to a representation in the Graph Modeling Language (GML).  GML is a format the Cytoscape 
