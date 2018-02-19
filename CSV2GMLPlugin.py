@@ -1,6 +1,6 @@
 import sys
 #import numpy
-
+import PyPluMA
 
 
 class CSV2GMLPlugin:
@@ -29,7 +29,7 @@ class CSV2GMLPlugin:
    def output(self, filename):
       gmlfilename = self.myfile[0:len(self.myfile)-3] + "gml"
       gmlfile = open(gmlfilename, 'w')
-      print "Writing GML file ",
+      PyPluMA.log("Writing GML file ")
 
       gmlfile.write("graph [\n")
       for i in range(self.n):
