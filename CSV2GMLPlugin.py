@@ -27,8 +27,9 @@ class CSV2GMLPlugin:
          i += 1
 
    def output(self, filename):
-      gmlfilename = self.myfile[0:len(self.myfile)-3] + "gml"
-      gmlfile = open(gmlfilename, 'w')
+      #gmlfilename = self.myfile[0:len(self.myfile)-3] + "gml"
+      #gmlfile = open(gmlfilename, 'w')
+      gmlfile = open(filename, 'w')
       PyPluMA.log("Writing GML file ")
 
       gmlfile.write("graph [\n")
