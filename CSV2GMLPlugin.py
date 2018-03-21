@@ -1,6 +1,6 @@
 import sys
 #import numpy
-
+import PyPluMA
 
 
 class CSV2GMLPlugin:
@@ -15,7 +15,6 @@ class CSV2GMLPlugin:
          self.bacteria.remove('\"\"')
       self.n = len(self.bacteria)
       self.ADJ = []
-      #self.ADJ = numpy.zeros([self.n, self.n])
       i = 0
       for line in filestuff:
          contents = line.split(',')
@@ -29,9 +28,10 @@ class CSV2GMLPlugin:
          i += 1
 
    def output(self, filename):
-      gmlfilename = self.myfile[0:len(self.myfile)-3] + "gml"
-      gmlfile = open(gmlfilename, 'w')
-      print "Writing GML file ",
+      #gmlfilename = self.myfile[0:len(self.myfile)-3] + "gml"
+      #gmlfile = open(gmlfilename, 'w')
+      gmlfile = open(filename, 'w')
+      PyPluMA.log("Writing GML file ")
 
       gmlfile.write("graph [\n")
       for i in range(self.n):
