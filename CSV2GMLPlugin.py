@@ -11,7 +11,8 @@ class CSV2GMLPlugin:
       filestuff = open(self.myfile, 'r')
       firstline = filestuff.readline()
       self.bacteria = firstline.split(',')
-      self.bacteria.remove('\"\"')
+      if (self.bacteria.count('\"\"') != 0):
+         self.bacteria.remove('\"\"')
       self.n = len(self.bacteria)
       self.ADJ = []
       #self.ADJ = numpy.zeros([self.n, self.n])
