@@ -1,0 +1,2 @@
+Prefix plugins/CSV2GML/example/
+Plugin CSV2GML inputfile corrP.csv outputfile corrP.gml
